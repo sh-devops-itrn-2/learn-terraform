@@ -19,3 +19,13 @@ data "aws_route53_zone" "selected" {
     zone_id = "Z03351562OJATKDWYEO40"
 }
 
+output "ami" {
+  value = data.aws_ami.ami.image_id
+}
+
+output "sg" {
+  value = data.aws_security_group.selected.id
+}
+output "zone" {
+  value = data.aws_route53_zone.selected.zone_id
+}
