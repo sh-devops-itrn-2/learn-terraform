@@ -5,4 +5,12 @@ module "ec2" {
 
 }
 
+# module "dns" {
+#
+#   for_each = var.components
+#   source = "./modules/DNS"
+#   name   = each.key
+#
+# }
+
 
