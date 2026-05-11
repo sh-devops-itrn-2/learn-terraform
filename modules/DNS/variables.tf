@@ -8,5 +8,4 @@ variable "components" {
   }
 }
 variable "name" {}
-
-
+variable "private_ip" {}
