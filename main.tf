@@ -5,13 +5,13 @@ module "ec2" {
 
 }
 
-# module "dns" {
-# source = "./modules/DNS"
-#
-#   for_each = var.components
-#   name   = each.key
-#   private_ip = module.ec2[each.key].private_ip
-#
-# }
+module "dns" {
+source = "./modules/DNS"
+
+  for_each = var.components
+  name   = each.key
+  private_ip = module.ec2[each.key].private_ip
+
+}
 
 
